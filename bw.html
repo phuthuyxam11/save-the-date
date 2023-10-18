@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+.wave{
+  height: 50px;
+  position: relative;
+  background: linear-gradient(90deg, #27b6b9 0%, #0f4061 100%);
+}
+
+/* Wave text css */
+.wave {
+  color:#fff;
+  text-align:center;
+  font-weight:bold;
+  font-size:24px;
+  padding-top:25px;
+  padding-bottom:25px;
+  
+}
+/* */
+
+
+.wave::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-repeat: repeat;
+  height: 10px;
+  background-size: 20px 20px;
+  background-image:
+   radial-gradient(circle at 10px -5px, transparent 1px, #fff 1px);
+}
+/* .wave::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-repeat: repeat;
+  height: 15px;
+  background-size: 40px 20px;
+  background-image:
+    radial-gradient(circle at 10px 15px, #fff 12px, transparent 13px);
+} */
+
+    </style>
+</head>
+<body>
+    <div class="wave">
+        An Example of Wave border in CSS
+        sadada
+      </div>
+</body>
+</html>
