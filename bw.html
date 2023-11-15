@@ -1,62 +1,777 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>doc</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.2/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/libs/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="assets/libs/slick/slick-theme.css" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+  <script>
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    OneSignalDeferred.push(function(OneSignal) {
+      OneSignal.init({
+        appId: "8155eb38-c254-4066-bfc2-49283bd6e065",
+        safari_web_id: "web.onesignal.auto.05605657-a1ec-46ab-8d61-441038586900",
+        notifyButton: {
+          enable: true,
+        },
+        allowLocalhostAsSecureOrigin: true,
+      });
+    });
+  </script>
 
 
-.wave{
-  height: 50px;
-  position: relative;
-  background: linear-gradient(90deg, #27b6b9 0%, #0f4061 100%);
-}
-
-/* Wave text css */
-.wave {
-  color:#fff;
-  text-align:center;
-  font-weight:bold;
-  font-size:24px;
-  padding-top:25px;
-  padding-bottom:25px;
-  
-}
-/* */
-
-
-.wave::before{
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-repeat: repeat;
-  height: 10px;
-  background-size: 20px 20px;
-  background-image:
-   radial-gradient(circle at 10px -5px, transparent 1px, #fff 1px);
-}
-/* .wave::after{
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-repeat: repeat;
-  height: 15px;
-  background-size: 40px 20px;
-  background-image:
-    radial-gradient(circle at 10px 15px, #fff 12px, transparent 13px);
-} */
-
-    </style>
 </head>
+
 <body>
-    <div class="wave">
-        An Example of Wave border in CSS
-        sadada
+  <div class="content">
+    <section class="calendar-section">
+      <div class="calendar-slider">
+        <div>
+          <img src="https://i.pinimg.com/564x/9d/77/bb/9d77bb3f55503a448301602db9c67cd8.jpg" alt="" />
+        </div>
+        <div>
+          <img src="https://i.pinimg.com/564x/5f/ef/75/5fef75a7dd44e43caf0e910568da9f15.jpg" alt="" />
+        </div>
       </div>
+      <div class="icon-controller"></div>
+    </section>
+
+    <!-- ssss -->
+    <div class="photo-garelly" id="photo-garelly">
+      <div class="grid grid-cols-8 gap-8 w-infinity">
+        <div class="grid gap-8">
+          
+          
+          <div class="item max-w-full rounded-lg">
+            <div class="close">×</div>
+            <div class="item-image">
+              <img class="h-auto" src="assets/images/311223/000003420001.jpg" alt="" />
+            </div>
+            <div class="item-content">
+              <p>
+                <strong>The quick, brown fox jumps over a lazy dog.</strong>
+              </p>
+              <p>DJs flock by when MTV ax quiz prog.</p>
+            </div>
+          </div>
+
+          <div class="item max-w-full rounded-lg">
+            <div class="close">×</div>
+            <div class="item-image">
+              <img class="h-auto" src="assets/images/311223/000004.jpg" alt="" />
+            </div>
+            <div class="item-content">
+              <p>
+                <strong>The quick, brown fox jumps over a lazy dog.</strong>
+              </p>
+              <p>DJs flock by when MTV ax quiz prog.</p>
+            </div>
+          </div>
+
+          <div class="item max-w-full rounded-lg">
+            <div class="close">×</div>
+            <div class="item-image">
+              <img class="h-auto" src="assets/images/311223/2023-05-06 18:05:43.275.JPG" alt="" />
+            </div>
+          </div>
+
+
+        </div>
+        <div class="grid gap-8">
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="" />
+          </div>
+        </div>
+        <div class="grid gap-8">
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="" />
+          </div>
+        </div>
+        <div class="grid gap-8">
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="" />
+          </div>
+        </div>
+        <div class="grid gap-8">
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="" />
+          </div>
+        </div>
+        <div class="grid gap-8">
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" alt="" />
+          </div>
+        </div>
+        <div class="grid gap-8">
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" alt="" />
+          </div>
+        </div>
+        <div class="grid gap-8">
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="calendar-section">
+      <div class="calendar-slider">
+        <div>
+          <img src="https://i.pinimg.com/564x/9d/77/bb/9d77bb3f55503a448301602db9c67cd8.jpg" alt="" />
+        </div>
+        <div>
+          <img src="https://i.pinimg.com/564x/5f/ef/75/5fef75a7dd44e43caf0e910568da9f15.jpg" alt="" />
+        </div>
+      </div>
+      <div class="icon-controller"></div>
+    </section>
+
+    <section class="count-down">
+
+      
+      <div class="time-machine">
+        <div id="timer"></div>
+      </div>
+      <!-- <div class="bg-fl-top">
+        <img src="assets/images/hoa_bg.png" alt="">
+      </div>
+      <div class="bg-fl-bt">
+        <img src="assets/images/hoa_bg.png" alt="">
+      </div> -->
+    </section>
+
+    <section>
+      <div id="scrolly-video"></div>
+    </section>
+
+
+    <div class="photo-garelly" id="photo-garelly">
+      <div class="grid grid-cols-8 gap-8 w-infinity">
+        <div class="grid gap-8">
+
+
+          <div class="item max-w-full rounded-lg">
+            <div class="close">×</div>
+            <div class="item-image">
+              <img class="h-auto" src="assets/images/311223/000003420001.jpg" alt="" />
+            </div>
+            <div class="item-content">
+              <p>
+                <strong>The quick, brown fox jumps over a lazy dog.</strong>
+              </p>
+              <p>DJs flock by when MTV ax quiz prog.</p>
+            </div>
+          </div>
+
+          <div class="item max-w-full rounded-lg">
+            <div class="close">×</div>
+            <div class="item-image">
+              <img class="h-auto" src="assets/images/311223/000004.jpg" alt="" />
+            </div>
+            <div class="item-content">
+              <p>
+                <strong>The quick, brown fox jumps over a lazy dog.</strong>
+              </p>
+              <p>DJs flock by when MTV ax quiz prog.</p>
+            </div>
+          </div>
+
+          <div class="item max-w-full rounded-lg">
+            <div class="close">×</div>
+            <div class="item-image">
+              <img class="h-auto" src="assets/images/311223/2023-05-06 18:05:43.275.JPG" alt="" />
+            </div>
+          </div>
+
+          
+        </div>
+        <!-- <div class="grid gap-8">
+          <div>
+            <img class="h-auto max-w-full rounded-lg" src="assets/images/311223/2023-05-06 18:05:43.275.JPG" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg" src="assets/images/311223/230911290015.JPG" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg" src="assets/images/311223/IMG_2215.JPG" alt="" />
+          </div>
+        </div> -->
+        <div class="grid gap-8">
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="assets/images/311223/564BF574-E7EC-411C-9699-338B9EDCE9F4.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="" />
+          </div>
+        </div>
+        <div class="grid gap-8">
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="" />
+          </div>
+        </div>
+        <div class="grid gap-8">
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="" />
+          </div>
+        </div>
+        <div class="grid gap-8">
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" alt="" />
+          </div>
+        </div>
+        <div class="grid gap-8">
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" alt="" />
+          </div>
+        </div>
+        <div class="grid gap-8">
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="photo-garelly" id="photo-garelly">
+      <div class="grid grid-cols-8 gap-8 w-infinity">
+        <div class="grid gap-8">
+
+
+          <div class="item max-w-full rounded-lg">
+            <div class="close">×</div>
+            <div class="item-image">
+              <img class="h-auto" src="assets/images/311223/000003420001.jpg" alt="" />
+            </div>
+            <div class="item-content">
+              <p>
+                <strong>The quick, brown fox jumps over a lazy dog.</strong>
+              </p>
+              <p>DJs flock by when MTV ax quiz prog.</p>
+            </div>
+          </div>
+
+          <div class="item max-w-full rounded-lg">
+            <div class="close">×</div>
+            <div class="item-image">
+              <img class="h-auto" src="assets/images/311223/000004.jpg" alt="" />
+            </div>
+            <div class="item-content">
+              <p>
+                <strong>The quick, brown fox jumps over a lazy dog.</strong>
+              </p>
+              <p>DJs flock by when MTV ax quiz prog.</p>
+            </div>
+          </div>
+
+          <div class="item max-w-full rounded-lg">
+            <div class="close">×</div>
+            <div class="item-image">
+              <img class="h-auto" src="assets/images/311223/2023-05-06 18:05:43.275.JPG" alt="" />
+            </div>
+          </div>
+
+          
+        </div>
+        <!-- <div class="grid gap-8">
+          <div>
+            <img class="h-auto max-w-full rounded-lg" src="assets/images/311223/2023-05-06 18:05:43.275.JPG" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg" src="assets/images/311223/230911290015.JPG" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg" src="assets/images/311223/IMG_2215.JPG" alt="" />
+          </div>
+        </div> -->
+        <div class="grid gap-8">
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="assets/images/311223/564BF574-E7EC-411C-9699-338B9EDCE9F4.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="" />
+          </div>
+        </div>
+        <div class="grid gap-8">
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="" />
+          </div>
+        </div>
+        <div class="grid gap-8">
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="" />
+          </div>
+        </div>
+        <div class="grid gap-8">
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" alt="" />
+          </div>
+        </div>
+        <div class="grid gap-8">
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" alt="" />
+          </div>
+        </div>
+        <div class="grid gap-8">
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>    <div class="photo-garelly" id="photo-garelly">
+      <div class="grid grid-cols-8 gap-8 w-infinity">
+        <div class="grid gap-8">
+
+
+          <div class="item max-w-full rounded-lg">
+            <div class="close">×</div>
+            <div class="item-image">
+              <img class="h-auto" src="assets/images/311223/000003420001.jpg" alt="" />
+            </div>
+            <div class="item-content">
+              <p>
+                <strong>The quick, brown fox jumps over a lazy dog.</strong>
+              </p>
+              <p>DJs flock by when MTV ax quiz prog.</p>
+            </div>
+          </div>
+
+          <div class="item max-w-full rounded-lg">
+            <div class="close">×</div>
+            <div class="item-image">
+              <img class="h-auto" src="assets/images/311223/000004.jpg" alt="" />
+            </div>
+            <div class="item-content">
+              <p>
+                <strong>The quick, brown fox jumps over a lazy dog.</strong>
+              </p>
+              <p>DJs flock by when MTV ax quiz prog.</p>
+            </div>
+          </div>
+
+          <div class="item max-w-full rounded-lg">
+            <div class="close">×</div>
+            <div class="item-image">
+              <img class="h-auto" src="assets/images/311223/2023-05-06 18:05:43.275.JPG" alt="" />
+            </div>
+          </div>
+
+          
+        </div>
+        <!-- <div class="grid gap-8">
+          <div>
+            <img class="h-auto max-w-full rounded-lg" src="assets/images/311223/2023-05-06 18:05:43.275.JPG" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg" src="assets/images/311223/230911290015.JPG" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg" src="assets/images/311223/IMG_2215.JPG" alt="" />
+          </div>
+        </div> -->
+        <div class="grid gap-8">
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="assets/images/311223/564BF574-E7EC-411C-9699-338B9EDCE9F4.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="" />
+          </div>
+        </div>
+        <div class="grid gap-8">
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="" />
+          </div>
+        </div>
+        <div class="grid gap-8">
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="" />
+          </div>
+        </div>
+        <div class="grid gap-8">
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" alt="" />
+          </div>
+        </div>
+        <div class="grid gap-8">
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" alt="" />
+          </div>
+        </div>
+        <div class="grid gap-8">
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg" alt="" />
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    <!-- <section class="notice-section">
+      <div class="flex items-center justify-end">
+        <div class="notice-alert">
+          <div class="n-icon">
+            <img
+              src="/assets/images/icons8-notification-bell-48.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+  </div>
+
+  https://codepen.io/danieledesantis/pen/qBdoXdZ
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="assets/libs/slick/slick.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/scrolly-video@latest/dist/scrolly-video.js"></script>
+
+
+  <script src="/assets/js/script.js"></script>
+
+  <script type="text/javascript">
+    new ScrollyVideo({
+      scrollyVideoContainer: "scrolly-video",
+      src: "https://scrollyvideo.js.org/goldengate.mp4"
+    });
+  </script>
+  <script type="text/javascript">
+
+    // (function () {
+    //   init();
+
+    //   var g_containerInViewport;
+    //   function init() {
+    //     setStickyContainersSize();
+    //     bindEvents();
+    //   }
+
+    //   function bindEvents() {
+    //     window.addEventListener("wheel", wheelHandler);
+    //   }
+
+    //   function setStickyContainersSize() {
+    //     document.querySelectorAll('.sticky-container').forEach(function (container) {
+    //       const stikyContainerHeight = container.querySelector('main').scrollWidth;
+    //       container.setAttribute('style', 'height: ' + stikyContainerHeight + 'px');
+    //     });
+    //   }
+
+    //   function isElementInViewport(el) {
+    //     const rect = el.getBoundingClientRect();
+    //     return rect.top <= 0 && rect.bottom > document.documentElement.clientHeight;
+    //   }
+
+    //   function wheelHandler(evt) {
+
+    //     const containerInViewPort = Array.from(document.querySelectorAll('.sticky-container')).filter(function (container) {
+    //       return isElementInViewport(container);
+    //     })[0];
+
+    //     if (!containerInViewPort) {
+    //       return;
+    //     }
+
+    //     var isPlaceHolderBelowTop = containerInViewPort.offsetTop < document.documentElement.scrollTop;
+    //     var isPlaceHolderBelowBottom = containerInViewPort.offsetTop + containerInViewPort.offsetHeight > document.documentElement.scrollTop;
+    //     let g_canScrollHorizontally = isPlaceHolderBelowTop && isPlaceHolderBelowBottom;
+
+    //     if (g_canScrollHorizontally) {
+    //       containerInViewPort.querySelector('main').scrollLeft += evt.deltaY;
+    //     }
+    //   }
+    // })();
+
+
+
+    // const garelly = document.getElementById("photo-garelly");
+    // const garellyW = document.getElementsByClassName("w-infinity")[0].offsetWidth;
+    // var count = 0;
+    // garelly.addEventListener("wheel", function (e) {
+    //   console.log("s: ", count)
+    //   if (e.deltaY > 0) {
+    //     count += 30;
+    //     garelly.scrollLeft += 30;
+    //     if (count <= garellyW) {
+    //       e.preventDefault();
+    //     }
+    //   } else {
+    //     garelly.scrollLeft -= 30;
+    //     count -= 30;
+    //     if (count >= 0 ) {
+    //       e.preventDefault();
+    //     }
+        
+    //   }
+    //   if (count <= -30 || count >= garellyW + 30) {
+    //     count = 0;
+    //   }
+    // });
+
+    
+
+
+
+
+    $(document).ready(function () {
+      $(".calendar-slider").on("init", function (event, slick) {
+        $(".icon-controller .arrow-prev").hide();
+      });
+      $(".calendar-slider").on(
+        "afterChange",
+        function (event, slick, currentSlide) {
+          if (currentSlide == 1) {
+            $(".icon-controller .arrow-next").hide();
+            $(".icon-controller .arrow-prev").show();
+          } else {
+            $(".icon-controller .arrow-next").show();
+            $(".icon-controller .arrow-prev").hide();
+          }
+        }
+      );
+
+      $(".calendar-slider").slick({
+        dots: true,
+        appendArrows: $(".icon-controller"),
+        prevArrow:
+          '<div class="arrow-prev"><span></span><span></span><span></span></div>',
+        nextArrow:
+          '<div class="arrow-next"><span></span><span></span><span></span></div>',
+      });
+    });
+  </script>
 </body>
+
 </html>
