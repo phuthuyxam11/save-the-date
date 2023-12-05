@@ -86,6 +86,7 @@
     });
 
     // collapse item
+
     $("body").on("click", ".item .close", function () {
       $(this).siblings(".item-content").removeAttr("style");
 
@@ -114,6 +115,36 @@
       }, _transitionDurations["0.3"] * 1000);
       $(".overlay").css({ display: "none" });
     });
+
+    $("#overlay").on("click", function () {      
+      $(this).siblings(".item-content").removeAttr("style");
+
+      var _css = {
+        position: "inherit",
+        top: _originalY,
+        transition:
+          "top " +
+          _transitionDurations["0.225"] +
+          "s, width " +
+          _transitionDurations["0.1"] +
+          "s, height " +
+          _transitionDurations["0.1"] +
+          "s",
+        "animation-duration": _transitionDurations["0.225"] + "s",
+      };
+      $(".item.active").removeClass("active").addClass("collapsing").css(_css);
+
+      $("body").removeClass("noscroll");
+
+      setTimeout(function () {
+        $(".item.collapsing").removeClass("collapsing bounce").css({
+          transition: "",
+          "animation-duration": "",
+        });
+      }, _transitionDurations["0.3"] * 1000);
+      $(".overlay").css({ display: "none" });
+    });
+
   });
 
   $(window).on("load", function () {
@@ -148,14 +179,14 @@ function notifyMe() {
   } else if (Notification.permission === "granted") {
     // Check whether notification permissions have already been granted;
     // if so, create a notification
-    const notification = new Notification("Hi there!");
+    const notification = new Notification("Nhận thông báo mới nhất từ chúng mình nhé.");
     // …
   } else if (Notification.permission !== "denied") {
     // We need to ask the user for permission
     Notification.requestPermission().then((permission) => {
       // If the user accepts, let's create a notification
       if (permission === "granted") {
-        const notification = new Notification("Hi there!");
+        const notification = new Notification("Nhận thông báo mới nhất từ chúng mình nhé.");
         // …
       }
     });
@@ -290,7 +321,6 @@ var deadline = new Date(Date.parse(new Date()) + days * 24 * 60 * 60 * 1000);
 var c = new Clock(deadline, function () {});
 document.getElementById("timer").appendChild(c.el);
 
-console.log($("#section-video").height());
 
 var player = videojs("my-player", {
   controls: true,
@@ -303,7 +333,6 @@ $(window).on("scroll", function () {
     player.play();
   }
   
-  console.log($("#photo-garelly").offset().top - $(window).scrollTop());
   if ($("#photo-garelly").offset().top - $(window).scrollTop() < 300 
   && $("#photo-garelly").offset().top - $(window).scrollTop() > -30) {
     $("#mouse-scroll").addClass("rotate-right");
