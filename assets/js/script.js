@@ -329,7 +329,9 @@ var player = videojs("my-player", {
 });
 
 $(window).on("scroll", function () {
-  if ($("#section-video").offset().top - $(window).scrollTop() < 100) {
+  if ($("#section-video").offset().top - $(window).scrollTop() < 100
+    && $("#section-video").offset().top - $(window).scrollTop() > 95
+  ) {
     player.play();
   }
   
