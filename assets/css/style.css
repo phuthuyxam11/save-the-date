@@ -187,7 +187,7 @@ img {
 
 .cover-photo {
 	position: relative;
-	background-image: url("../images/wedding_photo.jpeg");
+	background-image: url("../images/DSC02696.JPG");
 	width: 100%;
 	min-height: 100vh;
 	filter: grayscale(0.1);
@@ -199,7 +199,7 @@ img {
 .cover-content {
 	font-family: 'Montserrat', sans-serif;
 	position: absolute;
-	top: 45%;
+	top: 28%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	line-height: 1.2;
@@ -225,6 +225,10 @@ img {
 	padding-top: 50px;
 	line-height: 1.5;
 	text-align: justify;
+}
+
+.cover-letter p {
+	font-weight: 600;
 }
 
 .top-cover {
@@ -912,12 +916,12 @@ footer a:hover {
 
 .count-down {
 	background-color: #f3f4f5;
-    /* background-image: url(/assets/images/bg-wd-1.png);
+	background-image: url(/assets/images/count-d.png);
     position: relative;
     padding: 120px 0;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center; */
+    background-position: center;
 	
 }
 .bg-fl-top , .bg-fl-bt {
@@ -1054,7 +1058,25 @@ footer a:hover {
 
 .photo-garelly {
 	overflow-x: scroll;
-	margin: 10px;
+	padding: 50px 10px;
+	background-image: url("https://i.pinimg.com/564x/4c/4a/b3/4c4ab3aed4dbaa88685f66b8d59019ff.jpg");
+	background-size: cover;
+}
+
+#map-bg {
+	padding: 50px 10px;
+    background-repeat: no-repeat;
+    background-image: url("https://i.pinimg.com/564x/09/44/d0/0944d04590b739079903bd594cfae251.jpg");
+    background-size: cover;
+    background-position-y: 140px;
+}
+
+#qr-code {
+	padding: 50px 15px;
+}
+
+#section-video {
+	padding: 60px 0px;
 }
 
 .w-infinity {
@@ -1249,10 +1271,40 @@ footer a:hover {
 
 
 
+  #my-player {
+	width: 100% !important;
+  }
 
 
+  .map-d {
+	padding: 20px 0px;
+	text-align: center;
+	justify-content: center;
+	display: flex;
+  }
 
+  .note-guider {
+	margin-bottom: 20px;
+	display: flex;
+	align-items: center;
+	color: #000;
+}
 
+  .note-guider p {
+	font-size: 10px;
+	margin-left: 5px;
+  }
+  .note-guider img {
+	width: 25px;
+  }
+
+  .rotate-right {
+	rotate: 270deg;
+  }
+  
+  .slick-dotted.slick-slider {
+	margin-bottom: 0px;
+  }
 
 @keyframes animate {
     0% {

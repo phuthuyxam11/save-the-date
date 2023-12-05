@@ -15,7 +15,7 @@
 
   <link rel="stylesheet" href="assets/libs/slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="assets/libs/slick/slick-theme.css" />
-
+  <link href="https://vjs.zencdn.net/8.6.1/video-js.css" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
@@ -41,8 +41,9 @@
 
           <div class="cover-letter">
             <p>
-              Rất vui vì sự có mặt của các cậu, Cùng đến chung vui với chúng
-              tớ nhé ...
+              Gửi lời mời thân tình tới gia đình và bạn bè!
+              <br>
+              Rất vui vì sự có mặt của mọi người, tới dự đám cưới của chúng mình ...
             </p>
           </div>
         </div>
@@ -54,24 +55,21 @@
       </div>
     </section>
 
-    <div class="section-title">
-      <h3>Cùng đếm ngược với chúng mình nhé!</h3>
-    </div>
-    <section class="count-down">
-
+    <section class="count-down py-8">
+      <div class="text-left ml-4 decoration-black">
+        <p class="mt-6">Cho một đời thương yêu chúng ta cũng cần có điểm xuất phát</p>
+        <div class="section-title text-left">
+          <h3>Nào! đếm ngược cùng chúng mình nhé.</h3>
+        </div>
+      </div>
+      
       
       <div class="time-machine">
         <div id="timer"></div>
       </div>
-      <!-- <div class="bg-fl-top">
-        <img src="assets/images/hoa_bg.png" alt="">
-      </div>
-      <div class="bg-fl-bt">
-        <img src="assets/images/hoa_bg.png" alt="">
-      </div> -->
     </section>
 
-    <div class="section-title">
+    <div class="section-title py-10">
       <h3>Thông tin lễ cưới</h3>
     </div>
     <section class="calendar-section">
@@ -88,7 +86,10 @@
 
     <!-- ssss -->
     <div class="photo-garelly" id="photo-garelly">
-      <div class="grid grid-cols-8 gap-8 w-infinity">
+      <div class="section-title">
+        <h3>Đây là Hành Trình yêu của chúng mình.</h3>
+      </div>
+      <div class="grid grid-cols-8 gap-8 w-infinity my-12">
         <div class="grid gap-8">
 
 
@@ -223,39 +224,71 @@
           </div>
         </div>
       </div>
+      <div class="note-guider">
+        <img src="assets/images/lightbulb.png" alt="">
+        <p>Quyẹt phải để cùng đọc câu chuyện của chúng mình nhé </p>
+      </div>
     </div>
+    
+    <section id="section-video">
+      <div class="section-title text-left ml-4">
+        <h3>Gửi lời mời trân trọng nhất tới gia đình và bạn bè tới chung vui cùng bọn mình trong ngày đặc biệt của chúng mình</h3>
+      </div>
+      <video id="my-player" class="video-js vjs-default-skin" data-setup='{"fluid": true}' muted>
+        <source src="assets/images/IMG_5849.mp4" type="video/mp4">
+      </video>
+    </section>
 
-    <!--  Test abd -->
-    <!-- <div>
-        <div class="item">
-          <div class="close">
-            ×
-          </div>
-          <div class="item-title">
-            <h4>Wafting zephyrs</h4>
-            <h3>The quick fox</h3>
-          </div>
-          <div class="item-image">
-            <img src="https://imgur.com/gwi3Vcj.jpg">
-          </div>
-          <div class="item-content">
-            <p><strong>The quick, brown fox jumps over a lazy dog.</strong></p>
-            <p> DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab quick-jived waltz. Brick quiz whangs jumpy veldt fox. Bright vixens jump; dozy fowl quack. Quick wafting zephyrs vex bold Jim. Quick zephyrs blow, vexing daft Jim. Sex-charged fop blew my junk TV quiz. How quickly daft jumping zebras vex. Two driven jocks help fax my big quiz. Quick, Baz, get my woven flax jodhpurs! "Now fax quiz Jack!" my brave ghost pled. Five quacking zephyrs jolt my wax bed. Flummoxed by job, kvetching W. zaps Iraq. Cozy sphinx waves quart jug of bad milk. A very bad quack might jinx zippy fowls. Few quips galvanized the mock jury box. Quick brown dogs jump over the lazy fox. The jay, pig, fox, zebra, and my wolves quack! Blowzy red vixens fight for a quick jump. Joaquin Phoenix was gazed by MTV for luck. A wizard’s job is to vex chumps quickly in fog. Watch "Jeopardy!", Alex Trebek's fun TV quiz game. Woven silk pyjamas exchanged for blue quartz. Brawny gods just</p>
+    <section id="map-bg">
+      <div class="section-title">
+        <h3>Thông tin địa chỉ tổ chức hôn lễ</h3>
+      </div>
+      <section class="map-d">
+  
+        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <a href="#">
+            <div class="map-item">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d464.7508039897808!2d105.57413166590867!3d21.27121298478802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3134f066d35ca3c7%3A0x60bf5118e77322af!2zN0hDRitITTUsIMSQ4buTbmcgQ8awxqFuZywgWcOqbiBM4bqhYywgVsSpbmggUGjDumMsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1701270440782!5m2!1svi!2s" width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+            </div>        </a>
+          <div class="p-5">
+              <a href="#">
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Địa chỉ chú rể</h5>
+              </a>
+              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Đồng Cương - Yên Lạc - Vĩnh Phúc</p>
           </div>
         </div>
-      </div> -->
+      </section>
+      <section class="map-d">
+        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <a href="#">
+            <div class="map-item">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d464.7508039897808!2d105.57413166590867!3d21.27121298478802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3134f066d35ca3c7%3A0x60bf5118e77322af!2zN0hDRitITTUsIMSQ4buTbmcgQ8awxqFuZywgWcOqbiBM4bqhYywgVsSpbmggUGjDumMsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1701270440782!5m2!1svi!2s" width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </a>
+          <div class="p-5">
+              <a href="#">
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Địa chỉ cô dâu</h5>
+              </a>
+              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Phố Lồ - Yên Lạc - Vĩnh Phúc</p>
+          </div>
+        </div>
+      </section>
+    </section>
 
-    <!--  -->
+    <section id="qr-code">
+      <div class="section-title mx-2">
+        <h3>Dành cho ai lỡ hẹn với chúng mình.</h3>
+      </div>
+      <img src="assets/images/qr_code.png" alt="">
+    </section>
 
-    <section>album ảnh</section>
-
-    <section>Video phát thiệp</section>
 
     <section class="notice-section">
       <div class="flex items-center justify-end">
         <div class="notice-alert">
           <div class="n-icon">
-            <img src="/assets/images/icons8-notification-bell-48.png" alt="" />
+            <img src="assets/images/icons8-notification-bell-48.png" alt="" />
           </div>
         </div>
         <p class="mark">
@@ -287,78 +320,11 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="assets/libs/slick/slick.min.js"></script>
-<script src="/assets/js/script.js"></script>
+<script src="https://vjs.zencdn.net/8.6.1/video.min.js"></script>
+
+<script src="assets/js/script.js"></script>
 
 <script type="text/javascript">
-  // (function () {
-  //   init();
-
-  //   var g_containerInViewport;
-  //   function init() {
-  //     setStickyContainersSize();
-  //     bindEvents();
-  //   }
-
-  //   function bindEvents() {
-  //     window.addEventListener("wheel", wheelHandler);
-  //   }
-
-  //   function setStickyContainersSize() {
-  //     document.querySelectorAll('.sticky-container').forEach(function (container) {
-  //       const stikyContainerHeight = container.querySelector('main').scrollWidth;
-  //       container.setAttribute('style', 'height: ' + stikyContainerHeight + 'px');
-  //     });
-  //   }
-
-  //   function isElementInViewport(el) {
-  //     const rect = el.getBoundingClientRect();
-  //     return rect.top <= 0 && rect.bottom > document.documentElement.clientHeight;
-  //   }
-
-  //   function wheelHandler(evt) {
-
-  //     const containerInViewPort = Array.from(document.querySelectorAll('.sticky-container')).filter(function (container) {
-  //       return isElementInViewport(container);
-  //     })[0];
-
-  //     if (!containerInViewPort) {
-  //       return;
-  //     }
-
-  //     var isPlaceHolderBelowTop = containerInViewPort.offsetTop < document.documentElement.scrollTop;
-  //     var isPlaceHolderBelowBottom = containerInViewPort.offsetTop + containerInViewPort.offsetHeight > document.documentElement.scrollTop;
-  //     let g_canScrollHorizontally = isPlaceHolderBelowTop && isPlaceHolderBelowBottom;
-
-  //     if (g_canScrollHorizontally) {
-  //       containerInViewPort.querySelector('main').scrollLeft += evt.deltaY;
-  //     }
-  //   }
-  // })();
-
-  // const garelly = document.getElementById("photo-garelly");
-  // const garellyW = document.getElementsByClassName("w-infinity")[0].offsetWidth;
-  // var count = 0;
-  // garelly.addEventListener("wheel", function (e) {
-  //   console.log("s: ", count)
-  //   if (e.deltaY > 0) {
-  //     count += 30;
-  //     garelly.scrollLeft += 30;
-  //     if (count <= garellyW) {
-  //       e.preventDefault();
-  //     }
-  //   } else {
-  //     garelly.scrollLeft -= 30;
-  //     count -= 30;
-  //     if (count >= 0 ) {
-  //       e.preventDefault();
-  //     }
-
-  //   }
-  //   if (count <= -30 || count >= garellyW + 30) {
-  //     count = 0;
-  //   }
-  // });
-
   $(document).ready(function () {
     $(".calendar-slider").on("init", function (event, slick) {
       $(".icon-controller .arrow-prev").hide();

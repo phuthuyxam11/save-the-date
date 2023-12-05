@@ -17,9 +17,6 @@
 //     diff = fourthOfJuly - today;
 //   }
 
-
-
-
 //   // math
 //   let days = Math.floor(diff / (1000 * 60 * 60 * 24));
 //   let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -42,91 +39,101 @@
 
 // , 1000);
 
+(function ($) {
+  var _originalY,
+    _transitionDurations = {};
 
-
-(function($) {
-  var 	_originalY,
-        _transitionDurations = {};
-
-  $(document).ready(function() {
-    
+  $(document).ready(function () {
     // expand item
-    $('body').on('click', '.item:not(.active)', function() {
-      $('body').addClass('noscroll');
+    $("body").on("click", ".item:not(.active)", function () {
+      $("body").addClass("noscroll");
 
-      _originalY = parseInt($(this).css('top'));
+      _originalY = parseInt($(this).css("top"));
 
-      var _timeFactor = (_originalY - $('.content').scrollTop()) / 667 + 1; // is a responsive enviroment window's height should not be fixed
-      _transitionDurations['0.1'] = 0.1 * _timeFactor;
-      _transitionDurations['0.225'] = 0.225 * _timeFactor;
-      _transitionDurations['0.3'] = 0.3 * _timeFactor;
+      var _timeFactor = (_originalY - $(".content").scrollTop()) / 667 + 1; // is a responsive enviroment window's height should not be fixed
+      _transitionDurations["0.1"] = 0.1 * _timeFactor;
+      _transitionDurations["0.225"] = 0.225 * _timeFactor;
+      _transitionDurations["0.3"] = 0.3 * _timeFactor;
 
-      var _classes = 'active';
+      var _classes = "active";
 
       var _css = {
-        'position': 'fixed',
-        'top': '80px',
-        'bottom': '0px',
-        'left': '0px',
-        'transition': 'top ' + _transitionDurations['0.225'] + 's, width ' + _transitionDurations['0.3'] + 's, height ' + _transitionDurations['0.3'] + 's'
+        position: "fixed",
+        top: "80px",
+        bottom: "0px",
+        left: "0px",
+        transition:
+          "top " +
+          _transitionDurations["0.225"] +
+          "s, width " +
+          _transitionDurations["0.3"] +
+          "s, height " +
+          _transitionDurations["0.3"] +
+          "s",
       };
 
-      if ($('.content').scrollTop() < _originalY) {
-        _classes += ' bounce';
-        _css['animation-duration'] = _transitionDurations['0.3'] + 's';
+      if ($(".content").scrollTop() < _originalY) {
+        _classes += " bounce";
+        _css["animation-duration"] = _transitionDurations["0.3"] + "s";
       }
 
-      $(".overlay").css({'display': 'block'});
+      $(".overlay").css({ display: "block" });
       $(this).addClass(_classes);
       $(this).css(_css);
-      $(this).find('.item-content').css('transition-delay', _transitionDurations['0.3'] + 's');
-    })
+      $(this)
+        .find(".item-content")
+        .css("transition-delay", _transitionDurations["0.3"] + "s");
+    });
 
     // collapse item
-    $('body').on('click', '.item .close', function() {
-      $(this).siblings('.item-content').removeAttr('style');
+    $("body").on("click", ".item .close", function () {
+      $(this).siblings(".item-content").removeAttr("style");
 
       var _css = {
-        'position': 'inherit',
-        'top': 					_originalY,
-        'transition': 			'top ' + _transitionDurations['0.225'] + 's, width ' + _transitionDurations['0.1'] + 's, height ' + _transitionDurations['0.1'] + 's',
-        'animation-duration': 	_transitionDurations['0.225'] + 's',
+        position: "inherit",
+        top: _originalY,
+        transition:
+          "top " +
+          _transitionDurations["0.225"] +
+          "s, width " +
+          _transitionDurations["0.1"] +
+          "s, height " +
+          _transitionDurations["0.1"] +
+          "s",
+        "animation-duration": _transitionDurations["0.225"] + "s",
       };
-      $('.item.active').removeClass('active').addClass('collapsing').css(_css); 
+      $(".item.active").removeClass("active").addClass("collapsing").css(_css);
 
-      $('body').removeClass('noscroll');
+      $("body").removeClass("noscroll");
 
-      setTimeout(function() {
-        $('.item.collapsing').removeClass('collapsing bounce').css({
-          'transition': '',
-          'animation-duration': '',
+      setTimeout(function () {
+        $(".item.collapsing").removeClass("collapsing bounce").css({
+          transition: "",
+          "animation-duration": "",
         });
-      }, _transitionDurations['0.3']*1000);
-      $(".overlay").css({'display': 'none'});
-    })
-    
-  })
+      }, _transitionDurations["0.3"] * 1000);
+      $(".overlay").css({ display: "none" });
+    });
+  });
 
-  $(window).on('load', function() {
+  $(window).on("load", function () {
     // set items' initial position and container's height (should be called also on resize in a responsive enviroment)
     var _top = 32;
-    $('.item').each(function(i, el) {
-      $(el).css('top', _top);
+    $(".item").each(function (i, el) {
+      $(el).css("top", _top);
       _top += $(el).outerHeight() + 16;
-    })
-    $('.app-container').css('height', _top + 16);
-  })
-
+    });
+    $(".app-container").css("height", _top + 16);
+  });
 })(jQuery);
 
-$(".notice-alert").click(function (e) { 
+$(".notice-alert").click(function (e) {
   e.preventDefault();
   notifyMe();
 });
 
 // noti
 function notifyMe() {
-
   Notification.requestPermission().then((permission) => {
     // If the user accepts, let's create a notification
     if (permission === "granted") {
@@ -155,44 +162,42 @@ function notifyMe() {
   }
 }
 
-
-
 console.clear();
 
+function CountdownTracker(label, value) {
+  var el = document.createElement("span");
 
-function CountdownTracker(label, value){
-
-  var el = document.createElement('span');
-
-  el.className = 'flip-clock__piece';
-  el.innerHTML = '<b class="flip-clock__card card"><b class="card__top"></b><b class="card__bottom"></b><b class="card__back"><b class="card__bottom"></b></b></b>' + 
-    '<span class="flip-clock__slot">' + label + '</span>';
+  el.className = "flip-clock__piece";
+  el.innerHTML =
+    '<b class="flip-clock__card card"><b class="card__top"></b><b class="card__bottom"></b><b class="card__back"><b class="card__bottom"></b></b></b>' +
+    '<span class="flip-clock__slot">' +
+    label +
+    "</span>";
 
   this.el = el;
 
-  var top = el.querySelector('.card__top'),
-      bottom = el.querySelector('.card__bottom'),
-      back = el.querySelector('.card__back'),
-      backBottom = el.querySelector('.card__back .card__bottom');
+  var top = el.querySelector(".card__top"),
+    bottom = el.querySelector(".card__bottom"),
+    back = el.querySelector(".card__back"),
+    backBottom = el.querySelector(".card__back .card__bottom");
 
-  this.update = function(val){
-    val = ( '0' + val ).slice(-2);
-    if ( val !== this.currentValue ) {
-      
-      if ( this.currentValue >= 0 ) {
-        back.setAttribute('data-value', this.currentValue);
-        bottom.setAttribute('data-value', this.currentValue);
+  this.update = function (val) {
+    val = ("0" + val).slice(-2);
+    if (val !== this.currentValue) {
+      if (this.currentValue >= 0) {
+        back.setAttribute("data-value", this.currentValue);
+        bottom.setAttribute("data-value", this.currentValue);
       }
       this.currentValue = val;
       top.innerText = this.currentValue;
-      backBottom.setAttribute('data-value', this.currentValue);
+      backBottom.setAttribute("data-value", this.currentValue);
 
-      this.el.classList.remove('flip');
+      this.el.classList.remove("flip");
       void this.el.offsetWidth;
-      this.el.classList.add('flip');
+      this.el.classList.add("flip");
     }
-  }
-  
+  };
+
   this.update(value);
 }
 
@@ -201,40 +206,42 @@ function CountdownTracker(label, value){
 function getTimeRemaining(endtime) {
   var t = Date.parse(endtime) - Date.parse(new Date());
   return {
-    'Total': t,
-    'Ngày': Math.floor(t / (1000 * 60 * 60 * 24)),
-    'Giờ': Math.floor((t / (1000 * 60 * 60)) % 24),
-    'Phút': Math.floor((t / 1000 / 60) % 60),
-    'Giây': Math.floor((t / 1000) % 60)
+    Total: t,
+    Ngày: Math.floor(t / (1000 * 60 * 60 * 24)),
+    Giờ: Math.floor((t / (1000 * 60 * 60)) % 24),
+    Phút: Math.floor((t / 1000 / 60) % 60),
+    Giây: Math.floor((t / 1000) % 60),
   };
 }
 
 function getTime() {
   var t = new Date();
   return {
-    'Ngày': t,
-    'Giờ': t.getHours() % 12,
-    'Phút': t.getMinutes(),
-    'Giây': t.getSeconds()
+    Ngày: t,
+    Giờ: t.getHours() % 12,
+    Phút: t.getMinutes(),
+    Giây: t.getSeconds(),
   };
 }
 
-function Clock(countdown,callback) {
-  
+function Clock(countdown, callback) {
   countdown = countdown ? new Date(Date.parse(countdown)) : false;
-  callback = callback || function(){};
-  
+  callback = callback || function () {};
+
   var updateFn = countdown ? getTimeRemaining : getTime;
 
-  this.el = document.createElement('div');
-  this.el.className = 'flip-clock';
+  this.el = document.createElement("div");
+  this.el.className = "flip-clock";
 
   var trackers = {},
-      t = updateFn(countdown),
-      key, timeinterval;
+    t = updateFn(countdown),
+    key,
+    timeinterval;
 
-  for ( key in t ){
-    if ( key === 'Total' ) { continue; }
+  for (key in t) {
+    if (key === "Total") {
+      continue;
+    }
     trackers[key] = new CountdownTracker(key, t[key]);
     this.el.appendChild(trackers[key].el);
   }
@@ -242,30 +249,65 @@ function Clock(countdown,callback) {
   var i = 0;
   function updateClock() {
     timeinterval = requestAnimationFrame(updateClock);
-    
+
     // throttle so it's not constantly updating the time.
-    if ( i++ % 10 ) { return; }
-    
+    if (i++ % 10) {
+      return;
+    }
+
     var t = updateFn(countdown);
-    if ( t.Total < 0 ) {
+    if (t.Total < 0) {
       cancelAnimationFrame(timeinterval);
-      for ( key in trackers ){
-        trackers[key].update( 0 );
+      for (key in trackers) {
+        trackers[key].update(0);
       }
       callback();
       return;
     }
-    
-    for ( key in trackers ){
-      trackers[key].update( t[key] );
+
+    for (key in trackers) {
+      trackers[key].update(t[key]);
     }
   }
 
-  setTimeout(updateClock,500);
+  setTimeout(updateClock, 500);
 }
 
-var deadline = new Date(Date.parse(new Date()) + 89 * 24 * 60 * 60 * 1000);
-var c = new Clock(deadline, function(){
-  
-});
+var futureDate = new Date("2024-01-01T12:00:00");
+
+// Get the current date and time
+var now = new Date();
+
+// Calculate the time difference in milliseconds
+var timeDifference = futureDate.getTime() - now.getTime();
+
+// Convert the time difference to seconds, minutes, hours, etc.
+var seconds = Math.floor(timeDifference / 1000);
+var minutes = Math.floor(seconds / 60);
+var hours = Math.floor(minutes / 60);
+var days = Math.floor(hours / 24);
+var deadline = new Date(Date.parse(new Date()) + days * 24 * 60 * 60 * 1000);
+var c = new Clock(deadline, function () {});
 document.getElementById("timer").appendChild(c.el);
+
+console.log($("#section-video").height());
+
+var player = videojs("my-player", {
+  controls: true,
+  autoplay: false,
+  preload: "auto",
+});
+
+$(window).on("scroll", function () {
+  if ($("#section-video").offset().top - $(window).scrollTop() < 100) {
+    player.play();
+  }
+  
+  console.log($("#photo-garelly").offset().top - $(window).scrollTop());
+  if ($("#photo-garelly").offset().top - $(window).scrollTop() < 300 
+  && $("#photo-garelly").offset().top - $(window).scrollTop() > -30) {
+    $("#mouse-scroll").addClass("rotate-right");
+  } else {
+    $("#mouse-scroll").removeClass("rotate-right");
+  }
+});
