@@ -196,10 +196,38 @@ img {
 	background-repeat: no-repeat;
 }
 
+.quote-t p {
+	text-transform: inherit;
+	line-height: 1.7;
+	font-size: 13.5px;
+	color: #000;
+}
+
+.quote-t img {
+	width: 15px;
+	margin-right: 5px;
+}
+
+.sub-quote {
+	position: relative;
+}
+
+.first-q {
+	position: absolute;
+	top: -5px;
+	left: 2px;
+}
+
+.s-q {
+	position: absolute;
+    bottom: 12px;
+    right: 12px;
+}
+
 .cover-content {
 	font-family: 'Montserrat', sans-serif;
 	position: absolute;
-	top: 28%;
+	top: 20%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	line-height: 1.2;
@@ -1123,6 +1151,7 @@ footer a:hover {
 	transition: 0.5s;
 	opacity: 0.7;
 	text-align: center;
+	cursor: pointer;
   }
   
 
@@ -1215,18 +1244,17 @@ footer a:hover {
   .item.active {
 	overflow: scroll;
 	z-index: 10;
-	width: 95%;
     margin: 0 calc(2.5vh/2);
 	height: 667px;
-	transition: top .225s, width .3s, height .3s;
+	transition: top .225s, width .2s, height .2s;
   }
   
   .item.active.bounce {
-	animation: item-bounce .3s forwards;
+	animation: item-bounce .2s forwards;
   }
   
   .item.collapsing.bounce {
-	animation: item-collapse .3s forwards;
+	animation: item-collapse .2s forwards;
   }
   
   .item.active .close {
@@ -1335,6 +1363,19 @@ footer a:hover {
 	display: none;
 }
 
+@media only screen and (max-width: 599px) {
+	.item.active {
+		overflow: scroll;
+		z-index: 10;
+		width: 95%;
+		margin: 0 calc(2.5vh/2);
+		left: 50% !important;
+		transform: translate(-50%);
+		height: 667px;
+		transition: top .225s, width .2s, height .2s;
+	}
+}
+
 
 @media only screen and (min-width: 600px) {
 	.content {
@@ -1372,5 +1413,19 @@ footer a:hover {
 
 	.flip-clock__slot {
 		font-size: 1.5vw;
+	}
+
+	.quote-t p {
+		font-size: 17.5px;
+	}
+
+	.item.active {
+		overflow: scroll;
+		z-index: 10;
+		margin: 0 calc(2.5vh/2);
+		left: 50% !important;
+		transform: translate(-50%);
+		height: 667px;
+		transition: top .225s, width .2s, height .2s;
 	}
 }
