@@ -1217,6 +1217,11 @@ footer a:hover {
   .item-image {
 	position: relative;
 	overflow: hidden;
+	height: 100%;
+  }
+
+  .active .item-image {
+	height: auto;
   }
   
   .item-image img {
