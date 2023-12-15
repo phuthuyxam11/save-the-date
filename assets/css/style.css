@@ -1219,10 +1219,12 @@ footer a:hover {
 	overflow: hidden;
 	height: 100%;
 	cursor: pointer;
+	border-radius: 0.5rem;
   }
 
   .active .item-image {
 	height: auto;
+	border-radius: 0rem;
   }
   
   .item-image img {
@@ -1385,7 +1387,7 @@ footer a:hover {
 
 @media only screen and (min-width: 600px) {
 	.content {
-		max-width: 500px;
+		max-width: 600px;
 		margin: 0 auto;
 		flex-flow: column;
 		justify-content: center;
@@ -1422,7 +1424,7 @@ footer a:hover {
 	}
 
 	.quote-t p {
-		font-size: 17.5px;
+		font-size: 21.5px;
 	}
 
 	.item.active {
