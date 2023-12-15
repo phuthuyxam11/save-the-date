@@ -187,10 +187,10 @@ img {
 
 .cover-photo {
 	position: relative;
-	background-image: url("../images/DSC02696.JPG");
+	background-image: url("../images/311223/IMG_0093-min.jpg");
 	width: 100%;
 	min-height: 100vh;
-	filter: grayscale(0.1);
+	/* filter: grayscale(0.1); */
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -1218,6 +1218,7 @@ footer a:hover {
 	position: relative;
 	overflow: hidden;
 	height: 100%;
+	cursor: pointer;
   }
 
   .active .item-image {

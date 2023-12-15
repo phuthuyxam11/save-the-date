@@ -304,7 +304,7 @@ function Clock(countdown, callback) {
   setTimeout(updateClock, 500);
 }
 
-var futureDate = new Date("2024-01-01T12:00:00");
+var futureDate = new Date("2024-01-01T23:00:00");
 
 // Get the current date and time
 var now = new Date();
