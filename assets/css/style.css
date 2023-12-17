@@ -187,7 +187,7 @@ img {
 
 .cover-photo {
 	position: relative;
-	background-image: url("../images/311223/IMG_0093-min.jpg");
+	background-image: url("../images/DSC02696-min.jpg");
 	width: 100%;
 	min-height: 100vh;
 	/* filter: grayscale(0.1); */
@@ -1213,6 +1213,14 @@ footer a:hover {
 	color: #fff;
 	z-index: 2;
   }
+
+  .item-image-text {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #000;
+	font-weight: 600;
+  }
   
   .item-image {
 	position: relative;
@@ -1434,6 +1442,6 @@ footer a:hover {
 		left: 50% !important;
 		transform: translate(-52%);
 		height: 667px;
-		transition: top .225s, width .2s, height .2s;
+		transition: top .225s, width .1s, height .1s;
 	}
 }
