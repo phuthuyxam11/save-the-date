@@ -1402,6 +1402,7 @@ footer a:hover {
 		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 		border-radius: 10px;
 		display: flex;
+		background-color: #f3f4f5;
 	}
 
 	#mouse-scroll {
@@ -1419,8 +1420,9 @@ footer a:hover {
 
 	body {
 		line-height: 1;
-		background-image: url("https://phuthuyxam11.github.io/save-the-date/assets/images/bg_body-min.png");
-		background-size: contain;
+		background-image: url("https://phuthuyxam11.github.io/save-the-date/assets/images/bg_fl.jpg");
+		background-size: inherit;
+		background-repeat: round;
 	}
 
 	.card {
